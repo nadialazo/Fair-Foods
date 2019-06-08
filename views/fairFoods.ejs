@@ -7,20 +7,22 @@
         </head>
         
         <body>
+            <div class="container">
             <div class="jumbotron">
                 <h1 >Fair Foods at Lena Park</h1>
                 <p>Use this page to reserve one or more bags of fresh produce. Pick on Tuesday afternoons at Lena Park. Each bag
                     costs $2 </p>
                 <img src="images/fairFoods.jpg">
+                
             </div>
         
             <div>
                 How many grocery bags are you planning to purchase?
-                <form action="post"  method ="/reservations">
+                <form action="/reservations"  method="POST">
                     Name:
-                    <input type="text" name="firstName" value="Richard Hendricks">
+                    <input type="text" name="firstName" placeholder=>
                     Number:
-                    <select>
+                    <select name="bags" >
                         <option value=1>1</option>
                         <option value=2>2</option>
                         <option value=3>3</option>
@@ -31,8 +33,12 @@
         
                     <input type="submit" value="Save" />
                 </form>
+                <p >
+                <%= reservationDisplay %>
+                </p>
         
             </div>
+        </div>
         </body>
         
         </html>
