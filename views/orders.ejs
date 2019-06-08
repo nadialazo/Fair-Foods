@@ -8,7 +8,16 @@
         <body>
             <h1>All orders</h1>
 
-            <% for (let i=0; i < myOrders.lenght; i++){%>
+            <%# TYPO HERE for (let i=0; i < myOrders.lenght; i++){
+                COMMENTS in ejs start with %#
+                Good stuff here. The typo above was an issue.
+
+                If you intend to use a table, you need to make sure to include all elements. Be sure to review table elements on MDN or W3Schools.
+
+                Also, tr does not need action and method, those are for the form element.
+                
+                %>
+            <% for (let i=0; i < myOrders.length; i++){%>
                 <tr action="/allOrders" method ="POST">
                     <td><%= myOrders[i].name %></td>
                     <td><%= myOrders[i].bags %></td>  
